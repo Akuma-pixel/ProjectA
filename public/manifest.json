@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Kompare — Price Comparison",
+  "version": "1.0.0",
+  "description": "Compare a product's price across Amazon, Flipkart, Myntra, Meesho, Blinkit, Zepto, Instamart and BigBasket in one click.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["tabs", "scripting", "storage"],
+  "host_permissions": [
+    "https://www.amazon.in/*",
+    "https://amazon.in/*",
+    "https://www.flipkart.com/*",
+    "https://www.myntra.com/*",
+    "https://www.meesho.com/*",
+    "https://blinkit.com/*",
+    "https://www.zeptonow.com/*",
+    "https://www.swiggy.com/*",
+    "https://www.bigbasket.com/*"
+  ],
+  "minimum_chrome_version": "102"
+}
